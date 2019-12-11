@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}All Customer!{% endblock %}
+
+
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif;}
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            margin-left:auto; margin-right:auto;
+            margin-right:25%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+        }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+{# {{dump(arrayAllCustomer)}} #}
+
+    {{ parent() }}
+
+    <div class="example-wrapper">
+        <h1>✅</h1>
+        <caption>All Customers!</caption>
+        <table id="customers">
+            <tr>
+                <th>id</th>
+                <th>event_name</th>
+                <th>merchant</th>
+                <th>terminal</th>
+                <th>status</th>
+                <th>card_id</th>
+                <th>card_type</th>
+                <th>amount (ref:euro)</th>
+                <th>currency</th>
+                <th>country</th>
+            </tr>
+            {% for key,contentuser in arrayAllCustomer %}
+                <tr>
+                    <td>{{arrayAllCustomer[key]["id"] }}</td>
+                    <td>{{arrayAllCustomer[key]["event_name"] }}</td>
+                    <td>{{arrayAllCustomer[key]["merchant"] }}</td>
+                    <td>{{arrayAllCustomer[key]["terminal"] }}</td>
+                    <td>{{arrayAllCustomer[key]["status"] }}</td>
+                    <td>{{arrayAllCustomer[key]["card_type"] }}</td>
+                    <td>{{arrayAllCustomer[key]["card_id"] }}</td>
+                    <td>{{arrayAllCustomer[key]["amount"] }}</td>
+                    <td>{{arrayAllCustomer[key]["currency"] }}</td>
+                    <td>{{arrayAllCustomer[key]["country"] }}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

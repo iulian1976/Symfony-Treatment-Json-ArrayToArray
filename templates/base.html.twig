@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Customer Transaction{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('lib/bulma/bulma.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+        <!-- Bulma Version 0.7.5-->
+        <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/landing.css">
+    </head>
+    <body>
+        {% block body %}
+        <header class="hero is-primary is-medium">
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item" href="#">
+                                <img src="image" alt="Customer Transaction">
+                            </a>
+                            <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            </span>
+                        </div>
+                        <div id="navbarMenu" class="navbar-menu">
+                            <div class="navbar-end">
+                              <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="{{ path('display') }}">
+                                    <span class="icon">
+                                        <i class=" "></i>
+                                    </span>
+                                    <span>Display All Transaction</span>
+                                </a>
+                            </span>
+                                <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="{{path('fivecustomer') }}">
+                                    <span class="icon">
+                                        <i class=""></i>
+                                    </span>
+                                    <span>First 5 Customers with more transactions</span>
+                                </a>
+                            </span>
+                                <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="{{ path('tenbestcustomer') }}">
+                                    <span class="icon">
+                                        <i class=""></i>
+                                    </span>
+                                    <span>The Best 10 Customers with  the highest amounts</span>
+                                </a>
+                            </span>
+                                <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="{{ path('tenbestcustomer') }}">
+                                    <span class="icon">
+                                        <i class=" "></i>
+                                    </span>
+                                    <span>Display a Customer</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!---  End Nav    --->
+        <div class="hero is-primary">
+            <div class="hero-body">
+                <div class="container has-text-left">
+                    <div class="column is-6 is-offset-6">
+                        <h2 class="subtitle  has-text-black">
+                            Watch
+                        </h2>
+                        <p class="subtitle"></p>
+
+                        <div class="buttons is-left transparent ">
+                            <p class="button is-black is-rounded has-text-weight-bold">
+                                the best customer
+                            </p>
+                            <p class="button is-black is-outlined is-rounded">
+                                Rankings the First 10 customer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
