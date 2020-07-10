@@ -1,4 +1,4 @@
 # Symfony-Treatment-Json-ArrayToArray
 # you only need to get the project code and install the dependencies with Composer
-# execute in cli : "composer install"
+# execute : "composer install"
 #
